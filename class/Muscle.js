@@ -1,0 +1,5 @@
+class Muscle{
+    constructor(){
+
+    }
+}
