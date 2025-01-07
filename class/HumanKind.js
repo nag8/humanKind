@@ -1,39 +1,28 @@
-const LIQUID = {
-    alcohol: 'alcohol',
+const 飲み物 = {
+  アルコール: 'alcohol',
 };
 
-const SIGHT = {
-    alcohol: 'alcohol',
-};
+class ヒト{
+  constructor(){
+    this.感情 = {
+      恐れ: 0,
+      喜び: 0,
+    };
+    this.思考容量 = 100;
+  }
 
-class HumanKind{
-    constructor(ovum, sperm){
-        // 胎児
+  飲む(飲料){
+    switch(飲料.type){
+      case 飲み物.アルコール:
+        this.感情.恐れ++;
+        break;
 
-        this.emotions = {
-            fear: 0,
-        };
+      default:
+        break;
     }
+  }
 
-    drink(liquid){
-        switch(liquid.type){
-            case LIQUID.alcohol:
-                this.emotions.fear++;
-                break;
-
-            default:
-                break;
-        }
-    }
-
-    watch(sight){
-        switch(sight.type){
-            case horror:
-                this.emotions.fear++;
-                break;
-
-            default:
-                break;
-        }
-    }
+  話す(){
+    
+  }
 }
